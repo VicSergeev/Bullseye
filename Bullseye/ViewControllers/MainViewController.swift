@@ -9,6 +9,7 @@ import UIKit
 
 final class MainViewController: UIViewController {
 
+    @IBOutlet weak var sliderControl: UISlider!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -22,6 +23,12 @@ final class MainViewController: UIViewController {
         alert.addAction(action)
         
         present(alert, animated: true)
+    }
+    
+    
+    @IBAction func sliderMoved(_ sender: Any) {
+//        print("The value of the slider is now \(sender as! UISlider).value")
+        print("value is \(sliderControl.value)")
     }
     
 }
